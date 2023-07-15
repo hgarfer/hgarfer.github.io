@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
-=======
->>>>>>> 9c7a0dd (added gitignore)
 .idea
