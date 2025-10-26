@@ -1,5 +1,17 @@
 version: 2
 updates:
+  # Enable version updates for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    commit-message:
+      prefix: "ci"
+
   # Enable version updates for Bundler (Ruby dependencies)
   - package-ecosystem: "bundler"
     directory: "/" # Location of package manifests
