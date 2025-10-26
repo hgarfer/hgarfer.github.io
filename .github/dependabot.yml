@@ -1,0 +1,40 @@
+version: 2
+updates:
+  # Enable version updates for Bundler (Ruby dependencies)
+  - package-ecosystem: "bundler"
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+    # Allow both direct and indirect updates
+    allow:
+      - dependency-type: "direct"
+      - dependency-type: "indirect"
+    # Limit the number of open pull requests for version updates
+    open-pull-requests-limit: 5
+    # Add reviewers (optional - replace with your GitHub username if desired)
+    reviewers:
+      - "hgarfer"
+    # Add labels to categorize the PRs
+    labels:
+      - "dependencies"
+      - "jekyll"
+    # Commit message preferences
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    # Group updates for Jekyll-related gems together
+    groups:
+      jekyll-ecosystem:
+        patterns:
+          - "jekyll*"
+          - "github-pages"
+          - "minima"
+        update-types:
+          - "minor"
+          - "patch"
+      security-updates:
+        patterns:
+          - "*"
+        update-types:
+          - "security"
