@@ -1,0 +1,32 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="container">
+    <header class="site-header">
+        <h1 class="site-title">Blog</h1>
+        <nav class="site-nav">
+            <a href="{{ '/' | relative_url }}" class="nav-link">Home</a>
+            <a href="{{ '/contact.html' | relative_url }}" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <div class="blog-list">
+        {% if site.posts.size > 0 %}
+            {% for post in site.posts %}
+            <article class="blog-post-preview">
+                <h2 class="blog-post-title">
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </h2>
+                <p class="blog-post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+                {% if post.excerpt %}
+                <p class="blog-post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+                {% endif %}
+            </article>
+            {% endfor %}
+        {% else %}
+            <p style="text-align: center; color: #666;">No posts yet. Check back soon!</p>
+        {% endif %}
+    </div>
+</div>
