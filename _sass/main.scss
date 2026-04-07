@@ -44,6 +44,10 @@ body {
 
 .site-nav {
     margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .nav-link {
@@ -174,6 +178,74 @@ body {
     .section-title {
         font-size: 1.1rem;
     }
+}
+
+/* Blog styles */
+.blog-list {
+    width: 100%;
+    max-width: 700px;
+}
+
+.blog-post-preview {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1.5rem 0;
+}
+
+.blog-post-preview:last-child {
+    border-bottom: none;
+}
+
+.blog-post-title {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 0.4rem;
+}
+
+.blog-post-title a {
+    color: #333333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.blog-post-title a:hover {
+    color: #666666;
+}
+
+.blog-post-meta {
+    font-size: 0.85rem;
+    color: #999999;
+    margin-bottom: 0.75rem;
+}
+
+.blog-post-excerpt {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.7;
+}
+
+.blog-post-content {
+    width: 100%;
+    max-width: 700px;
+    line-height: 1.8;
+}
+
+.blog-post-content h2,
+.blog-post-content h3 {
+    font-weight: 400;
+    margin: 1.5rem 0 0.75rem;
+}
+
+.blog-post-content p {
+    margin-bottom: 1rem;
+}
+
+.blog-post-content ul,
+.blog-post-content ol {
+    margin: 0.75rem 0 1rem 1.5rem;
+}
+
+.blog-post-content li {
+    margin-bottom: 0.4rem;
 }
 
 /* Print styles */
